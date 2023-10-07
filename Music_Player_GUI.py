@@ -1,11 +1,14 @@
-import pygame
-import tkinter as tkr
-from tkinter.filedialog import askdirectory
-import os
+# Импорт библиотек необходимых для создания приложения
+import pygame # для работы с аудио
+import tkinter as tkr # для графического интерфейса
+from tkinter.filedialog import askdirectory # для запроса у пользователя директории с музыкальными файлами.
+import os # используется для работы с операционной системой
 
-music_player = tkr.Tk()
-music_player.title("My Music Player")
-music_player.geometry("450x350")
+'''Создание главного окна приложения'''
+music_player = tkr.Tk() # Создает главное окно приложения.
+music_player.title("My Music Player")# Устанавливает заголовок окна.
+music_player.geometry("450x350")# Устанавливает размер окна.
+
 directory = askdirectory()
 os.chdir(directory)
 song_list = os.listdir()
