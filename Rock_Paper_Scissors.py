@@ -8,13 +8,13 @@
 import random
 
 choices = ["Rock", "Paper", "Scissors"]
-computer = random.choice(choices)
-player = False
 cpu_score = 0
 player_score = 0
 
 while True:
-    player = input("Сhoose, rock, scissors or paper and enter your answer:").capitalize()
+    computer = random.choice(choices)  # Обновляем выбор компьютера на каждой итерации
+    player = input("Choose, rock, scissors or paper and enter your answer:").capitalize()
+    
     if player == computer:
         print('Tie')
     elif player == "Rock":
@@ -40,6 +40,6 @@ while True:
             player_score += 1
     elif player == "End":
         print("Final Scores:")
-        print(f"CPU:{cpu_score}")
-        print(f"Plaer:{player_score}")
+        print(f"CPU: {cpu_score}")
+        print(f"Player: {player_score}")
         break
